@@ -1,0 +1,147 @@
+<?php
+
+$dayList = ["Sunday", "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+
+$serviceList = [["icon"		=> "shopping_mall.png",
+					"name"		=> "Shopping Mall",
+					"EngName" 	=> "Shopping Mall",
+					"NepName" 	=> "सपिङ मल",
+					"time"		=> ["00:00-23:59"],
+                    "openDays" 	=> ["Monday", "Wednesday", "Saturday"]],
+         
+                	["icon"		=> "fashion.png",
+                	"name" 		=> "Fashion Store",
+				 	"EngName" 	=> "Fashion Store",
+					 "NepName" 	=> "फेन्सी स्टोर",
+					 "time"		=> ["00:00-23:59"],
+                 	"openDays" 	=> ["Monday", "Wednesday", "Saturday"]],
+                    
+                	["icon"		=> "clothes.png",
+                	"name" 		=> "Clothing Store",
+					"EngName" 	=> "Clothing Store",
+					"NepName" 	=> "कपदा पसल",
+					"time"		=> ["00:00-23:59"],
+                    "openDays" 	=> ["Monday", "Wednesday", "Saturday"]],
+                   							
+               		["icon"		=> "shoes.png",
+               		"name" 		=> "Shoe Store",
+					"EngName" 	=> "Shoe Store",
+					"NepName" 	=> "जुत्ता पसल",
+					"time"		=> ["00:00-23:59"],
+                    "openDays" 	=> ["Monday", "Wednesday", "Saturday"]],
+                    
+					["icon"		=> "cosmetics.png",
+					"name"		=> "Cosmetic Shop",
+					"EngName" 	=> "Cosmetic Shop",
+					"NepName" 	=> "कस्मेतिक पसल",
+					"time"		=> ["00:00-23:59"],
+                    "openDays" 	=> ["Monday", "Wednesday", "Saturday"]],
+                   
+                	["icon"     => "kitchen.png",
+					"name"		=> "Kitchenware Shop",
+					"EngName" 	=> "Kitchenware Shop",
+					"NepName" 	=> "भाँडा/भान्साजन्य सामाग्री पसल",
+					"time"		=> ["00:00-23:59"],
+                    "openDays" 	=> ["Sunday", "Tuesday", "Friday"]],
+                    
+                	["icon"		=> "cabinet.png",
+					"name"		=> "Furniture Store",
+					"EngName" 	=> "Furniture Store",
+					"NepName" 	=> "फर्निचर स्टोर",
+					"time"		=> ["00:00-23:59"],
+                    "openDays" 	=> ["Monday", "Wednesday"]],
+                    
+                    ["icon"		=> "pickup-car.png",
+					"name"		=> "Automobile Store",
+					"EngName" 	=> "Automobile Store",
+					"NepName" 	=> "अटोमोबाइल पसल",
+					"time"		=> ["00:00-23:59"],
+                    "openDays" 	=> ["Monday", "Wednesday"]],
+                   
+                    ["icon"		=> "vendor.png",
+					"name"		=> "Footpath Businesses",
+					"EngName" 	=> "Footpath Businesses",
+					"NepName" 	=> "फुटपाथ/ठेला व्यापार",
+					"time"		=> ["06:00-11:00","16:00-19:00"],
+                    "openDays" 	=> ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]],
+                    
+                    ["icon"		=> "gadget.png",
+					"name"		=> "Electric & Electronics Shop",
+					"EngName" 	=> "Electric & Electronics Shop",
+					"NepName" 	=> "इलेक्ट्रिक र इलेक्ट्रोनिक्स पसल",
+					"time"		=> ["06:00-11:00","16:00-19:00"],
+                    "openDays" 	=> ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]],
+                    
+                    ["icon"		=> "shopping-cart.png",
+					"name"		=> "Department Store",
+					"EngName" 	=> "Department Store",
+					"NepName" 	=> "डिपार्टमेन्ट स्टाेर",
+					"time"		=> ["06:00-11:00","16:00-19:00"],
+                    "openDays" 	=> ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]],
+                    
+                    ["icon"		=> "stationary.png",
+					"name"		=> "Stationery Store",
+					"EngName" 	=> "Stationery Store",
+					"NepName" 	=> "स्टेशनरी स्टाेर",
+					"time"		=> ["06:00-11:00","16:00-19:00"],
+                    "openDays" 	=> ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]],
+                    
+                    ["icon"		=> "food-delivery.png",
+					"name"		=> "Take Away Services",
+					"EngName" 	=> "Take Away Services",
+					"NepName" 	=> "टेक अवे सेवा",
+					"time"		=> ["12:00-19:00"],
+                    "openDays" 	=> ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]],
+                    
+                    ["icon"		=> "online-shop.png",
+					"name"		=> "Online Delivery",
+					"EngName" 	=> "Online Delivery",
+					"NepName" 	=> "अनलाइन डेलेभरी सेवा",
+					"time"		=> ["12:00-19:00"],
+                    "openDays" 	=> ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]],
+                    
+                    ["icon"		=> "medicine.png",
+					"name"		=> "Pharmacy",
+					"EngName" 	=> "Pharmacy",
+					"NepName" 	=> "औशधि पसल",
+					"time"		=> ["00:00-23:59"],
+                    "openDays" 	=> ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]],
+                    
+                    ["icon"		=> "scalpel.png",
+					"name"		=> "Surgical Supply Store",
+					"EngName" 	=> "Surgical Supply Store",
+					"NepName" 	=> "सर्जिकल सप्लाइ पसल",
+					"time"		=> ["00:00-23:59"],
+                    "openDays" 	=> ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]],
+                    
+                    ["icon"		=> "hardware.png",
+					"name"		=> "Hardware Shop",
+					"EngName" 	=> "Hardware Shop",
+					"NepName" 	=> "हार्डवेयर पसल",
+					"time"		=> ["14:00-19:00"],
+                    "openDays" 	=> ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]],
+                    
+                    ["icon"		=> "car.png",
+					"name"		=> "Workshop",
+					"EngName" 	=> "Workshop",
+					"NepName" 	=> "गाडी वर्कसप",
+					"time"		=> ["08:00-20:00"],
+                    "openDays" 	=> ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]],
+                    
+                    ["icon"		=> "butchery.png",
+					"name"		=> "Meat Shop",
+					"EngName" 	=> "Meat Shop",
+					"NepName" 	=> "माछा मासु पसल",
+					"time"		=> ["06:00-11:00","17:00-19:00"],
+                    "openDays" 	=> ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]],
+                    
+                    ["icon"		=> "supermarket.png",
+					"name"		=> "Groceries/ Fruits/ Vegetable Store",
+					"EngName" 	=> "Grocery/ Fruits/ Vegetable Store",
+					"NepName" 	=> "खाद्यवस्तु/ फलफुल/ तरकारी पसल",
+					"time"		=> ["06:00-11:00","17:00-19:00"],
+                    "openDays" 	=> ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]]
+                    
+				];
+           
+?>
