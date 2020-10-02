@@ -1,0 +1,13 @@
+$serviceObj = [["icon"    => "",
+                "EngName" => "Clothing",
+                "NpName"  => "Clothing",
+                "openDays"=> ["Sunday,Friday"]],
+            
+                ["icon"    => "",
+                 "name"    => "Vegetable",
+                 "EngName" => "Vegetable",
+                 "NpName"  => "Vegetable",
+                 "openDays"=> ["Sunday,Friday"]]
+                ];
+            
+

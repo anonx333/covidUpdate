@@ -237,7 +237,7 @@ include 'service_parameter.php';
         }
 
         .serviceFooter{
-            background-color: #f1f1f1;
+            background-color: #fff6dd;
             padding: 10px;
             color: #4c4c4c;
             margin-top: 56px;
@@ -246,6 +246,11 @@ include 'service_parameter.php';
             min-height: 68px;
             align-content: center;
 
+        }
+
+        .serviceFooterOpen{
+            background: #00cb35 !important;
+            color: white !important;
         }
 
         .serviceHeader{
@@ -471,7 +476,7 @@ include 'service_parameter.php';
         </div>
         <!-- /Country search -->
         <!-- open Services -->
-        <div class="row" id="openServices">
+        <div class="row" id="openServices" style="display:none">
             <div class="col-12">
                 <div class="row headerCard" style="background-color: #00cb80; height: 280px;" >
                     <div class="col-sm-12 headerWrap">
@@ -844,7 +849,7 @@ include 'service_parameter.php';
 
         if(searchCountry == "Nepal" )
         {
-            $('#openServices').css('display','block');
+            $('#openServices').css('display','none');
         }
         else
         {
@@ -884,44 +889,82 @@ include 'service_parameter.php';
 
     function update_service(service)
     {
-        $.ajax({
-            type: "GET",
-            dataType: 'JSON',
-            crossDomain: true,
-            crossOrigin: true,
-            url: "getOpenService.php?day=" + service,
-            success: function (response) { 
-                $('#serviceListRow').html('');
-                for(var i = 0 ; i < response.length; i++)
-                {   var divBody = '';
+        
+        // $.ajax({
+        //     type: "GET",
+        //     dataType: 'JSON',
+        //     crossDomain: true,
+        //     crossOrigin: true,
+        //     url: "getOpenService.php?day=" + service,
+        //     success: function (response) { 
+        //         $('#serviceListRow').html('');
+        //         for(var i = 0 ; i < response.length; i++)
+        //         {   var divBody = '';
 
-                     divBody = divBody + '<div class="col-sm-12 col-md-4 col-lg-4 col-xl-2 numberWrap"><div class="row"><div class="col-1 col-sm-1 col-md-1 col-lg-2"></div><div class="col-10 col-sm-10 col-md-10 col-lg-8 numberCard"><div class="row serviceHeader"><div class="col-12" >' + response[i]["name"] +'</div></div><div class="row numberLabel"><div class="col-12"><div class="imgWrapBig"><img src="img/service/' + response[i]["icon"] + '" alt="' + response[i]["name"] +'"></div></div></div>';
+        //              divBody = divBody + '<div class="col-sm-12 col-md-4 col-lg-4 col-xl-2 numberWrap"><div class="row"><div class="col-1 col-sm-1 col-md-1 col-lg-2"></div><div class="col-10 col-sm-10 col-md-10 col-lg-8 numberCard"><div class="row serviceHeader"><div class="col-12" >' + response[i]["name"] +'</div></div><div class="row numberLabel"><div class="col-12"><div class="imgWrapBig"><img src="img/service/' + response[i]["icon"] + '" alt="' + response[i]["name"] +'"></div></div></div>';
                     
-                    if (response[i]["time"] != undefined)
-                    {
-                        divBody = divBody + '<div class="row serviceFooter"><div class="col-12" >';
-                        for(var j = 0; j< response[i]["time"].length;j++)
-                        {
-                            if (response[i]["time"][j] == "00:00-23:59")
-                            {
-                                divBody = divBody +"Full Day" + '<br/>';
-                            }
-                            else
-                            {
-                                divBody = divBody + response[i]["time"][j] + '<br/>';
-                            }
-                        }
-                        divBody = divBody + '</div></div>';
-                    }
+        //             if (response[i]["time"] != undefined)
+        //             {
+        //                 var checkOpen = false;
+        //                 for(var j = 0; j< response[i]["time"].length;j++)
+        //                 {
+        //                     if (response[i]["time"][j] == "00:00-23:59")
+        //                     {
+        //                         checkOpen = true;
+        //                     }
+        //                     else
+        //                     {
 
-                    divBody = divBody + '</div></div></div>';
+        //                         var openTime = response[i]["time"][j].split('-')[0];
+        //                         var closeTime = response[i]["time"][j].split('-')[1];
+
+        //                         var firstDate = new Date("January 01, 2000 " + openTime);
+        //                         var secondDate = new Date("January 01, 2000 " + closeTime);
+
+        //                         var today = new Date();
+        //                         var time = today.getHours() + ":" + today.getMinutes();
+
+        //                         var currentTime = new Date("January 01, 2000 " + time);
+
+        //                         if(currentTime >= firstDate && currentTime <= secondDate)
+        //                         {
+        //                             checkOpen = true;
+        //                         }
+
+        //                     }
+        //                 }
+
+        //                 if(checkOpen)
+        //                 {
+        //                     divBody = divBody + '<div class="row serviceFooter serviceFooterOpen"><div class="col-12" >';
+        //                 }
+        //                 else
+        //                 {
+        //                     divBody = divBody + '<div class="row serviceFooter"><div class="col-12" >';
+        //                 }
+
+        //                 for(var j = 0; j< response[i]["time"].length;j++)
+        //                 {
+        //                     if (response[i]["time"][j] == "00:00-23:59")
+        //                     {
+        //                         divBody = divBody +"Full Day" + '<br/>';
+        //                     }
+        //                     else
+        //                     {
+        //                         divBody = divBody + response[i]["time"][j] + '<br/>';
+        //                     }
+        //                 }
+        //                 divBody = divBody + '</div></div>';
+        //             }
+
+        //             divBody = divBody + '</div></div></div>';
                    
                     
-                    $('#serviceListRow').append(divBody);
-                }
-            }
+        //             $('#serviceListRow').append(divBody);
+        //         }
+        //     }
 
-        });
+        // });
     }
 
     function update_record(x,y,z){
